@@ -12,6 +12,7 @@ CLASS aid net/minecraft/entity/EntityType
 		METHOD a create (Laik;)Laid$a;
 		METHOD a build (Ljava/lang/String;)Laid;
 		METHOD b disableSaving ()Laid$a;
+	CLASS aid$b EntityFactory
 	FIELD A FIREWORK_ROCKET Laid;
 	FIELD C GHAST Laid;
 	FIELD D GIANT Laid;
@@ -92,6 +93,7 @@ CLASS aid net/minecraft/entity/EntityType
 	FIELD ba category Laik;
 	FIELD bb saveable Z
 	FIELD bc summonable Z
+	FIELD bd isFireImmune Z
 	FIELD be translationKey Ljava/lang/String;
 	FIELD bf textComponent Ljm;
 	FIELD bg lootTableId Lqr;
@@ -135,6 +137,7 @@ CLASS aid net/minecraft/entity/EntityType
 	METHOD a loadFromEntityTag (Lbgv;Lavm;Lahz;Lib;)V
 	METHOD a spawnFromItemStack (Lbgv;Lbbp;Lavm;Lev;Lail;ZZ)Lahz;
 	METHOD a spawn (Lbgv;Lib;Ljm;Lavm;Lev;Lail;ZZ)Lahz;
+	METHOD a getOriginY (Lbgy;Lev;ZLcrb;)D
 	METHOD a fromTag (Lib;)Ljava/util/Optional;
 		ARG 0 compoundTag
 	METHOD a getEntityFromTag (Lib;Lbgv;)Ljava/util/Optional;
@@ -144,11 +147,13 @@ CLASS aid net/minecraft/entity/EntityType
 		ARG 2 entityProcessor
 	METHOD a get (Ljava/lang/String;)Ljava/util/Optional;
 	METHOD a register (Ljava/lang/String;Laid$a;)Laid;
+	METHOD a isTaggedWith (Lyz;)Z
 	METHOD b isSummonable ()Z
 	METHOD b create (Lbgv;Lib;Ljm;Lavm;Lev;Lail;ZZ)Lahz;
 	METHOD b loadEntityFromTag (Lib;Lbgv;)Ljava/util/Optional;
 		ARG 0 compoundTag
 		ARG 1 world
+	METHOD c isFireImmune ()Z
 	METHOD d getCategory ()Laik;
 	METHOD e getTranslationKey ()Ljava/lang/String;
 	METHOD f getTextComponent ()Ljm;
@@ -158,3 +163,4 @@ CLASS aid net/minecraft/entity/EntityType
 	METHOD j getDefaultSize ()Laia;
 	METHOD k getMaxTrackDistance ()I
 	METHOD l getTrackTickInterval ()I
+	METHOD m alwaysUpdateVelocity ()Z
