@@ -6,6 +6,9 @@ CLASS auk net/minecraft/entity/mob/SlimeEntity
 	FIELD bz SLIME_SIZE Lqg;
 	FIELD c sizeY F
 	FIELD d sizeZ F
+	METHOD a configureSlime (IZ)V
+		ARG 1 size
+		ARG 2 isNewSpawn
 	METHOD dR getSquishSound ()Lyh;
 	METHOD dS getJumpSound ()Lyh;
 	METHOD dT getSize ()I
